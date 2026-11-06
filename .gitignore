@@ -1,93 +1,248 @@
-# Python
+
+# ============================================================
+# FruitCount — Day 33/100
+# Computer Vision | YOLO11n | FastAPI | React + Vite
+# ============================================================
+
+# ============================================================
+# 1. PYTHON
+# ============================================================
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
+*.egg
 *.egg-info/
+.eggs/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.pyre/
+.pytype/
+.tox/
+.nox/
 .coverage
+.coverage.*
 htmlcov/
+coverage.xml
+pip-wheel-metadata/
 
-# Virtual environments
+# ============================================================
+# 2. VIRTUAL ENVIRONMENTS
+# ============================================================
 .venv/
 venv/
 env/
 ENV/
+virtualenv/
+.python-version
 
-# Environment and secrets
+# ============================================================
+# 3. ENVIRONMENT VARIABLES & SECRETS
+# ============================================================
 .env
 .env.*
 !.env.example
+!.env.*.example
+
 *.pem
 *.key
+*.p12
+*.pfx
+*.jks
+
 credentials.json
 secrets.json
+service-account*.json
+*credentials*.json
+*.secret
+*.token
 
-# Node / frontend
+# ============================================================
+# 4. NODE.JS / REACT / VITE / TYPESCRIPT
+# ============================================================
 node_modules/
+.pnpm-store/
+.npm/
+.yarn/cache/
+.yarn/unplugged/
+
 dist/
 build/
 coverage/
 .vite/
 .next/
 .nuxt/
-*.tsbuildinfo
+.svelte-kit/
 
-# IDE / OS
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Keep reproducible lockfiles tracked:
+# package-lock.json
+# pnpm-lock.yaml
+# yarn.lock
+
+# ============================================================
+# 5. IDE / OPERATING SYSTEM
+# ============================================================
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
+Thumbs.db:encryptable
 desktop.ini
+$RECYCLE.BIN/
+*.swp
+*.swo
+*~
 
-# Datasets and archives
+# ============================================================
+# 6. DATASETS — NEVER COMMIT RAW DATA
+# ============================================================
 datasets/
 dataset/
 data/
 raw_data/
+raw/
+processed_data/
+external_data/
+
+# Dataset formats
+*.parquet
+*.arrow
+*.feather
+*.tfrecord
+*.tfrecords
+*.h5ad
+
+# Archives
 *.zip
 *.7z
 *.rar
 *.tar
 *.tar.gz
 *.tgz
+*.gz
+*.bz2
+*.xz
 
-# ML artifacts / checkpoints
+# Note: small CSV/JSON metadata and evaluation outputs
+# may be committed when properly reviewed.
+
+# ============================================================
+# 7. MACHINE LEARNING CHECKPOINTS
+# ============================================================
 *.pt
 *.pth
 *.ckpt
 *.onnx
 *.h5
 *.hdf5
+*.keras
 *.tflite
 *.safetensors
 *.engine
 *.torchscript
+*.pb
+*.weights
 *.pkl
 *.pickle
 *.joblib
 
-# Training runs
+# Model binaries remain local or in external artifacts.
+# Commit models/README.md and model metadata instead.
+
+# ============================================================
+# 8. YOLO / TRAINING EXPERIMENTS
+# ============================================================
 runs/
 train_runs/
+predict_runs/
+val_runs/
+yolo_dataset/
+
 wandb/
 mlruns/
 lightning_logs/
 tensorboard/
 events.out.tfevents.*
-*.cache
 
-# Temporary files
+# Cached features and labels
+*.cache
+*.npy
+*.npz
+
+# ============================================================
+# 9. KAGGLE / NOTEBOOK CACHE
+# ============================================================
+.ipynb_checkpoints/
+.kaggle/
+kaggle/working/
+kaggle/input/
+
+# Keep original .ipynb notebooks tracked.
+
+# ============================================================
+# 10. TEMPORARY AND DOWNLOADED FILES
+# ============================================================
 tmp/
 temp/
 .cache/
-.ipynb_checkpoints/
-*.log
-*.tmp
-*.part
+downloads/
+download_cache/
 
-# Kaggle generated datasets / working directories
-kaggle/working/
-yolo_dataset/
+*.tmp
+*.temp
+*.part
+*.partial
+*.crdownload
+*.download
+*.bak
+*.old
+*.log
+
+# ============================================================
+# 11. BACKEND RUNTIME
+# ============================================================
+uploads/
+uploaded_files/
+inference_cache/
+prediction_cache/
+
+*.sqlite
+*.sqlite3
+*.db
+
+# ============================================================
+# 12. DEPLOYMENT / LOCAL TOOLING
+# ============================================================
+.vercel/
+.netlify/
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+*.tfvars
+
+# ============================================================
+# 13. KEEP DOCUMENTATION & SOURCE
+# ============================================================
+# README.md
+# AGENTS.md
+# LICENSE
+# .env.example
+# notebooks/*.ipynb
+# models/README.md
+# reports/*.md
+# reports/*.csv
+# reports/*.json
+# assets/plots/*.png
+# assets/examples/*.jpg
+# assets/screenshots/*.png
+# assets/diagrams/*
+# backend/**/*.py
+# frontend/src/**
+# docs/**
+# scripts/**
+# **/.gitkeep
