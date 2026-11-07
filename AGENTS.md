@@ -1,74 +1,36 @@
-# AGENTS.md — FruitCount
+# FruitCount — Agent Operating Contract
 
-## Project Context
+## Scope and source priority
+1. Running code (`backend/app`, `frontend/src`) and tests. 2. V4 experiment files (`reports/*.json`, `train_args.yaml`, `train_results.csv`, checkpoint manifest). 3. Original dataset/source README and licenses. 4. Documentation. When sources disagree, disclose the contradiction rather than guessing.
 
-Day 33 of the 100 Days of Projects portfolio.
+## Repository invariants
+- Preserve root structure `README.md`, `AGENTS.md`, `LICENSE`, `.gitignore`, `.env.example`, `notebooks/`, `models/`, `reports/`, `assets/`, `backend/`, `frontend/`, `docs/`, `scripts/`. Do not rename/move existing artifacts.
+- Never create or commit `datasets/`, raw image collections, `.env`, credentials or model binaries; `models/best.pt` is ignored. Never edit `LICENSE` without explicit authorization.
+- Update only documentation unless implementation changes are explicitly requested. Keep prior source/provenance JSON, CSV, YAML and plots unchanged.
 
-Task:
-Tomato detection, ripeness classification, and fruit counting.
+## Scientific/ML integrity
+- V4 YOLO11n pretrained; six classes in frozen order: Green, Breakers, Turning, Pink, Light Red, Red.
+- Select checkpoint and tune thresholds on validation only; test partition previously seen during V2/V3 and **not blind**.
+- Distinguish raw manually counted fruits (14,303) from filtered COCO boxes (14,190). Never conflate detection mAP with count accuracy.
+- Never invent per-class AP, MAE, GPU benchmarks, published deployment or independent tests.
+- Source data access/attribution/license and checkpoint provenance must be maintained; validate SHA-256 before making model claims.
+- Track train/val/test split fidelity and identify session/block/perceptual leakage risks; do not declare zero leakage after a disabled hash audit.
 
-Primary model:
-YOLO11n.
+## Implementation contracts
+- FastAPI routes: GET `/api/v1/health`, GET `/api/v1/ready`, POST `/api/v1/predict`. Keep upload validation and typed Pydantic response unchanged without client coordination.
+- Frontend: React + TypeScript + Vite; API contract lives in `frontend/src/api.ts`; maintain real network requests, responsive states, class overlays, JSON export. No mocked numbers presented as evidence.
+- Test before reporting: `python -m pytest backend/tests -q`, `npm run build` inside `frontend`, `/ready`, and one real image. Unit tests override the model dependency and alone cannot certify real inference.
+- Uploaded images may be sensitive; no broad permissive CORS, arbitrary file writes, public API exposure or undocumented persistence.
 
-Backend:
-Python + FastAPI.
+## Documentation rules
+- English `docs/en/` and Indonesian `docs/id/` have equivalent depth, scope, and factual tables; update both when project facts change.
+- Main README is the entry point; use existing relative image paths and real figures. Do not invent missing screenshots or missing benchmark tables.
+- Existing `docs/architecture.md`, `docs/integration.md`, `docs/deployment.md`, `docs/roadmap.md` remain until explicit migration.
 
-Frontend:
-React + TypeScript + Vite.
+## Before / Now / Next
+- Before: V2 weak baseline, V3 Save Version stalled late.
+- Now: V4 checkpoint exported, API/UI code present, validation history tracked, assets pushed; local end-to-end metrics require verification.
+- Next: real-inference smoke test, counting evaluation, error analysis, outside-domain testing, security and reproducible deployment.
 
-## Repository Rules
-
-1. Preserve the existing directory structure.
-2. Do not rename or remove folders without approval.
-3. Do not create a datasets/ directory.
-4. Do not commit raw datasets.
-5. Do not commit secrets or environment files.
-6. Do not fabricate evaluation metrics.
-7. Keep train, validation, and test splits separate.
-8. Select models and thresholds using validation data.
-9. Document all dataset sources, licenses, and versions.
-10. Keep notebooks reproducible and well documented.
-11. Add tests for inference and API functionality.
-12. Avoid breaking existing APIs.
-13. Do not modify the LICENSE automatically.
-14. Treat downloaded weights and dataset licenses separately.
-15. Record limitations and known failure cases.
-
-## AI Experiment Standards
-
-- Dataset audit
-- Integrity verification
-- Label distribution analysis
-- Leakage checks
-- Reproducible split handling
-- Pretrained baseline
-- Training and validation tracking
-- Checkpoint selection
-- Test evaluation
-- Error analysis
-- Artifact export
-
-## Backend Standards
-
-- Typed request and response schemas
-- Input validation
-- Structured error responses
-- Health and readiness endpoints
-- Model loaded once per process
-- No unsafe arbitrary file execution
-- Automated tests
-
-## Frontend Standards
-
-- Responsive design
-- Accessible interactions
-- Upload validation
-- Loading and error states
-- Prediction visualizations
-- No fabricated live metrics
-
-## Completion Criteria
-
-A project is completed only when implementation,
-evaluation, documentation, and reproducibility
-have been verified.
+## Definition of done / change checklist
+Inspect repo tree and source first; implement minimal changes; run relevant tests; confirm relative paths and image embeds; compare all numeric claims with source files; disclose unknowns; show `git diff --stat`; never claim production readiness without independent evidence. Suggested commit: `docs: document FruitCount V4 with bilingual evidence and asset gallery`.

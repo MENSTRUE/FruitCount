@@ -1,0 +1,3 @@
+# Backend-specific agent rules
+
+Source of truth: `app/api/routes.py`, `app/services/detector.py`, `app/core/config.py`, `app/schemas/prediction.py`, root manifest. Maintain `/health`, `/ready`, `/predict` contracts and 6-class order; load weights lazily once and validate class names. Treat all uploads as hostile; retain MIME/size/pixel checks; avoid saving raw images, logging secrets or exposing public API without authorization. Test `python -m pytest backend/tests -q`; tests use fake detector, so validate real inference separately. Do not fabricate accuracy, latency or count metrics. Follow root `../AGENTS.md`.
