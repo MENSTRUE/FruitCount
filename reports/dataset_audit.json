@@ -1,0 +1,28 @@
+{
+  "images": {
+    "train": 477,
+    "val": 105,
+    "test": 95
+  },
+  "boxes": {
+    "train": 10050,
+    "val": 1938,
+    "test": 2202
+  },
+  "raw_visible_fruit": 14303,
+  "coco_boxes": 14190,
+  "sha256_audit_ran": false,
+  "exact_duplicates": null,
+  "exact_cross_split": null,
+  "inferred_block_groups": 50,
+  "shared_blocks": [],
+  "unparsed_block_names": 0,
+  "bad_decodes": [],
+  "bad_dimensions": [],
+  "warnings": [],
+  "limitations": [
+    "No perceptual near-duplicate or plant-identity audit",
+    "Filename-block heuristic not verified as plant-independent",
+    "Previously seen test split (V2) is not blind in V3"
+  ]
+}

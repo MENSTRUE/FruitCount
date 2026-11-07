@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "image_size": 960,
+  "batch_size": 4,
+  "epochs_max": 60,
+  "patience": 12,
+  "workers": 0,
+  "architecture": "YOLO11n pretrained",
+  "ultralytics": "8.4.203",
+  "torch": "2.11.0+cu130",
+  "phase": "training_and_export_only",
+  "run_full_sha256": false,
+  "train_mode": "train"
+}

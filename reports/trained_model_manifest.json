@@ -1,0 +1,21 @@
+{
+  "architecture": "yolo11n",
+  "classes": [
+    "Green",
+    "Breakers",
+    "Turning",
+    "Pink",
+    "Light Red",
+    "Red"
+  ],
+  "image_size": 960,
+  "seed": 42,
+  "checkpoint_sha256": "af3339a3593d6b273fd4be0c6e479ed4f83d701c27426de9605e3438ebccd0e8",
+  "checkpoint_size_bytes": 5524122,
+  "source_checkpoint": "/kaggle/working/fruitcount_day33_v4/train_runs/yolo11n_v4/weights/best.pt",
+  "validation_selected": true,
+  "selection_rule": "Ultralytics best.pt based on validation fitness",
+  "training_or_reuse": "train",
+  "training_section_wall_seconds": 8835.91,
+  "test_status": "not_evaluated_in_this_notebook; previously viewed V2/V3 split not blind"
+}

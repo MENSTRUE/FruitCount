@@ -1,0 +1,110 @@
+{
+  "files": [
+    {
+      "path": "assets/examples/train_ground_truth.jpg",
+      "size": 104556,
+      "sha256": "23a8e03ad70d89805387af135c03d2bb2fae8ae364fe820d033dbe7446df235a"
+    },
+    {
+      "path": "assets/examples/val_ground_truth.jpg",
+      "size": 89023,
+      "sha256": "58b55badaab0a2d1afe615a91bf7b55dbd834ebee043b636513095224d3425ba"
+    },
+    {
+      "path": "assets/plots/dataset_distribution.png",
+      "size": 31304,
+      "sha256": "6b5709c33bd8f69cb6d25b73deee33ac8031446e3d02dab98e50e130825d43e5"
+    },
+    {
+      "path": "assets/plots/train_BoxF1_curve.png",
+      "size": 260138,
+      "sha256": "7503161b6a259465cd57ca33fee8ac617f116130fa4e6a84239bb8b6b185c3a3"
+    },
+    {
+      "path": "assets/plots/train_BoxPR_curve.png",
+      "size": 201769,
+      "sha256": "85f6d6c4ea96c7902009f349744f3d5c42b0c11c49bc4718d3036962db43aed5"
+    },
+    {
+      "path": "assets/plots/train_BoxP_curve.png",
+      "size": 292863,
+      "sha256": "aad2e92cbb8f4e83bf2440b7b31163be7c6dd9f6c65d1521bc22db9bda77911d"
+    },
+    {
+      "path": "assets/plots/train_BoxR_curve.png",
+      "size": 236711,
+      "sha256": "8446f4a153c4156bef1e60ba689dad35b3bbcdf39fd3b485a5823eef7c413671"
+    },
+    {
+      "path": "assets/plots/train_confusion_matrix.png",
+      "size": 180723,
+      "sha256": "21b62dd205c4ab065bfa0b61932718baf35178c9d3ed011b3236a45509c0e190"
+    },
+    {
+      "path": "assets/plots/train_confusion_matrix_normalized.png",
+      "size": 196292,
+      "sha256": "1b3e20be1e2ff9279d1809d71abebd2a477e3cfdb756e48e84848973b602d9d5"
+    },
+    {
+      "path": "assets/plots/train_labels.jpg",
+      "size": 152065,
+      "sha256": "48a031270039a8e7343f0fb75a68cba92dadcaa3095817256c81f68965994e83"
+    },
+    {
+      "path": "assets/plots/train_results.png",
+      "size": 317295,
+      "sha256": "b8638b01666740a16af369aa0cbda6fc3a7d1fefe5f55f0ccf0fc081fa8703b3"
+    },
+    {
+      "path": "models/best.pt",
+      "size": 5524122,
+      "sha256": "af3339a3593d6b273fd4be0c6e479ed4f83d701c27426de9605e3438ebccd0e8"
+    },
+    {
+      "path": "reports/README.md",
+      "size": 303,
+      "sha256": "9ba2764f68dee3518f1e409f31704af84ea4e9f1e6c80656f976dcaf4a72377f"
+    },
+    {
+      "path": "reports/dataset_audit.json",
+      "size": 634,
+      "sha256": "390fe663e06f6dafb925c7088e6b5eb9f0ea47eddfcf6b708a94efe016af6ddd"
+    },
+    {
+      "path": "reports/experiment_config.json",
+      "size": 297,
+      "sha256": "3639042b76032e970670867aaecb1839f5e01aad15c46b99bd5431ffee7745ee"
+    },
+    {
+      "path": "reports/source_LICENSE",
+      "size": 1002,
+      "sha256": "f5c672cbfecae7cbf0f6a1629320a5da735cc2a1350f2b3a039afd47e8e0f84d"
+    },
+    {
+      "path": "reports/source_README.md",
+      "size": 3339,
+      "sha256": "d026770493549ee85e09b4952671140e999d791116aacdd173ea4ca2aedb4430"
+    },
+    {
+      "path": "reports/source_provenance.json",
+      "size": 3699,
+      "sha256": "d3b52a84ff443a8d05f7549ada0bdfa284ee524d3ee9b0ed87c207ffe36f1047"
+    },
+    {
+      "path": "reports/train_args.yaml",
+      "size": 1755,
+      "sha256": "06bf7d10bcfd9d0f79f36e6f64df4b91b7b152b2f9254de55b7a7a0516450ab3"
+    },
+    {
+      "path": "reports/train_results.csv",
+      "size": 7284,
+      "sha256": "18e51a23911a1d447bdd458f4b595ba27b7b6a4b9710b690f6855af6a05ddba6"
+    },
+    {
+      "path": "reports/trained_model_manifest.json",
+      "size": 666,
+      "sha256": "7d1385f04918714dc6831850237327e4c0c0dba826b39a0f9d83cfd63eba3f5c"
+    }
+  ],
+  "created_utc": "2026-11-06T16:50:33.757026+00:00"
+}
